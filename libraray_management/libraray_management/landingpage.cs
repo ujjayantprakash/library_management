@@ -37,5 +37,11 @@ namespace libraray_management
             addbook ob = new addbook();
             ob.Show();
         }
+
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            add_student ob = new add_student();
+            ob.Show();
+        }
     }
 }

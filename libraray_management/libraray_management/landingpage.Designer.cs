@@ -74,14 +74,14 @@ namespace libraray_management
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(151, 34);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(151, 34);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // memberToolStripMenuItem
@@ -98,6 +98,7 @@ namespace libraray_management
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
             this.addToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.addToolStripMenuItem1.Text = "add";
+            this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // viewDetailsToolStripMenuItem
             // 

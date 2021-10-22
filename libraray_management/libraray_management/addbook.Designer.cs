@@ -52,6 +52,7 @@ namespace libraray_management
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(299, 26);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -59,6 +60,7 @@ namespace libraray_management
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(299, 26);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -66,6 +68,7 @@ namespace libraray_management
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(299, 26);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -73,6 +76,7 @@ namespace libraray_management
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(299, 26);
             this.textBox4.TabIndex = 3;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox6
             // 
@@ -80,6 +84,7 @@ namespace libraray_management
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(299, 26);
             this.textBox6.TabIndex = 5;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button1
             // 
@@ -121,6 +126,7 @@ namespace libraray_management
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "BookName";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -130,6 +136,7 @@ namespace libraray_management
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Quantity";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -139,6 +146,7 @@ namespace libraray_management
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Price";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -148,6 +156,7 @@ namespace libraray_management
             this.label5.Size = new System.Drawing.Size(85, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Book MFD";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -157,6 +166,7 @@ namespace libraray_management
             this.label6.Size = new System.Drawing.Size(127, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Book Publication";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -166,6 +176,7 @@ namespace libraray_management
             this.label7.Size = new System.Drawing.Size(144, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Book Author Name";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // dateTimePicker1
             // 
@@ -173,6 +184,7 @@ namespace libraray_management
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
             this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // addbook
             // 

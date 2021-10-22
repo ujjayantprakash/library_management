@@ -23,3 +23,4 @@ C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.exe
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.pdb
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.addbook.resources
+C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.add_student.resources
