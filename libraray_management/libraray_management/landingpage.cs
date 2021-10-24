@@ -43,5 +43,11 @@ namespace libraray_management
             add_student ob = new add_student();
             ob.Show();
         }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewbook ob = new viewbook();
+            ob.Show();
+        }
     }
 }
