@@ -54,6 +54,7 @@ namespace libraray_management
             }
         }
         int bookid;
+        Int64 rowid;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null)
@@ -74,6 +75,8 @@ namespace libraray_management
                 ob.Open();
                 DataSet ds = new DataSet();
                 obj.Fill(ds);
+
+                rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
 
                 textBox2.Text = ds.Tables[0].Rows[0][1].ToString();
                 textBox3.Text = ds.Tables[0].Rows[0][2].ToString();
@@ -156,6 +159,70 @@ namespace libraray_management
         {
             textBox1.Clear();
             panel2.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("are you sure?", "success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                string bname = textBox2.Text;
+                string bauthor = textBox3.Text;
+                string publish = textBox4.Text;
+                string pubdate = dateTimePicker1.Text;
+                double price = Double.Parse(textBox5.Text);
+                Int64 quant = Int64.Parse(textBox6.Text);
+
+                try
+                {
+                    string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                    MySqlConnection ob = new MySqlConnection(myConnection);
+                    MySqlDataAdapter obj = new MySqlDataAdapter();
+                    //string query;
+                    //  obj.SelectCommand = new MySqlCommand("insert into library.newbook (book_name,book_author,publisher,publish_date,cost,quantity) values ('" + book_name + "','" + book_author + "','" + publisher + "','" + dop + "','" + price + "','" + quantity + "');", ob);
+                    obj.SelectCommand = new MySqlCommand("update library.newbook set book_name = '" + bname + "' , book_author ='" + bauthor + "'  ,publisher = '" + publish + "' ,publish_date='" + pubdate + "'  ,cost='" + price + "'  ,quantity='" + quant + "'  where book_id='" + rowid + "'", ob);
+                    MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                    ob.Open();
+                    DataSet ds = new DataSet();
+                    obj.Fill(ds);
+
+                    //dataGridView1.DataSource = ds.Tables[0];
+                    ob.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("are you sure?", "confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+
+                try
+                {
+                    string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                    MySqlConnection ob = new MySqlConnection(myConnection);
+                    MySqlDataAdapter obj = new MySqlDataAdapter();
+                    //string query;
+                    //  obj.SelectCommand = new MySqlCommand("insert into library.newbook (book_name,book_author,publisher,publish_date,cost,quantity) values ('" + book_name + "','" + book_author + "','" + publisher + "','" + dop + "','" + price + "','" + quantity + "');", ob);
+                    obj.SelectCommand = new MySqlCommand("delete from library.newbook where book_id='"+rowid+"';", ob);
+                    MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                    ob.Open();
+                    DataSet ds = new DataSet();
+                    obj.Fill(ds);
+
+                    //dataGridView1.DataSource = ds.Tables[0];
+                    ob.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
