@@ -65,6 +65,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="issuebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issuebook.Designer.cs">
+      <DependentUpon>issuebook.cs</DependentUpon>
+    </Compile>
     <Compile Include="landingpage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issuebook.resx">
+      <DependentUpon>issuebook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="landingpage.resx">
       <DependentUpon>landingpage.cs</DependentUpon>

@@ -55,5 +55,11 @@ namespace libraray_management
             view_student ob = new view_student();
             ob.Show();
         }
+
+        private void issueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            issuebook ob = new issuebook();
+            ob.Show();
+        }
     }
 }

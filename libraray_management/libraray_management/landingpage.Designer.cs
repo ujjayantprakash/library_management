@@ -46,7 +46,6 @@ namespace libraray_management
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
@@ -58,7 +57,7 @@ namespace libraray_management
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(670, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(673, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,14 +96,14 @@ namespace libraray_management
             // addToolStripMenuItem1
             // 
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(205, 34);
             this.addToolStripMenuItem1.Text = "add";
             this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // viewDetailsToolStripMenuItem
             // 
             this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
-            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(205, 34);
             this.viewDetailsToolStripMenuItem.Text = "view details";
             this.viewDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewDetailsToolStripMenuItem_Click);
             // 
@@ -113,6 +112,7 @@ namespace libraray_management
             this.issueToolStripMenuItem.Name = "issueToolStripMenuItem";
             this.issueToolStripMenuItem.Size = new System.Drawing.Size(68, 29);
             this.issueToolStripMenuItem.Text = "Issue";
+            this.issueToolStripMenuItem.Click += new System.EventHandler(this.issueToolStripMenuItem_Click);
             // 
             // returnToolStripMenuItem
             // 
