@@ -60,6 +60,8 @@ namespace libraray_management
                 else
                 {
                     MessageBox.Show("wrong username or password", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb1.Clear();
+                    tb2.Clear();
                 }
                 ob.Close();
             }

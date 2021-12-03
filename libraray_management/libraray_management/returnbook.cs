@@ -77,8 +77,8 @@ namespace libraray_management
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null)
             {
                 rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
-                bdate = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                b_id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                bdate = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                b_id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                 obj.SelectCommand = new MySqlCommand("select book_name from library.newbook where book_id='" + b_id + "';", ob);
                 MySqlCommandBuilder cb1 = new MySqlCommandBuilder(obj);
                 DataSet ds1 = new DataSet();
