@@ -138,5 +138,41 @@ namespace libraray_management
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                String book_name = textBox1.Text;
+           
+                try
+                {
+                    string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                    MySqlConnection ob = new MySqlConnection(myConnection);
+                    MySqlDataAdapter obj = new MySqlDataAdapter();
+                    //string query;
+                    obj.SelectCommand = new MySqlCommand("delete from library.newbook where book_name='" + book_name + "';", ob);
+                    // obj.SelectCommand = new MySqlCommand("select * from library.newbook;", ob); 
+                    MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                    ob.Open();
+                    DataSet ds = new DataSet();
+                    obj.Fill(ds);
+
+                    MessageBox.Show("Data deleted successfully", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Clear();
+                    ob.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Empty fields error!! please enter again", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Clear();
+            }
+        }
     }
 }

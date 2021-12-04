@@ -53,11 +53,29 @@
     <Compile Include="addbook.Designer.cs">
       <DependentUpon>addbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_mag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_mag.designer.cs">
+      <DependentUpon>add_mag.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="add_student.Designer.cs">
       <DependentUpon>add_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="catalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalogue.Designer.cs">
+      <DependentUpon>catalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="epad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="epad.designer.cs">
+      <DependentUpon>epad.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -91,6 +109,12 @@
     <Compile Include="viewbook.Designer.cs">
       <DependentUpon>viewbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="view_mag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_mag.designer.cs">
+      <DependentUpon>view_mag.cs</DependentUpon>
+    </Compile>
     <Compile Include="view_student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +124,17 @@
     <EmbeddedResource Include="addbook.resx">
       <DependentUpon>addbook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="add_mag.resx">
+      <DependentUpon>add_mag.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_student.resx">
       <DependentUpon>add_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalogue.resx">
+      <DependentUpon>catalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="epad.resx">
+      <DependentUpon>epad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -126,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewbook.resx">
       <DependentUpon>viewbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_mag.resx">
+      <DependentUpon>view_mag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view_student.resx">
       <DependentUpon>view_student.cs</DependentUpon>

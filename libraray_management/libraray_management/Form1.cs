@@ -54,7 +54,8 @@ namespace libraray_management
                if(ds.Tables[0].Rows.Count!=0)
                 {
                     this.Hide();
-                    landingpage oo = new landingpage();
+                    string user = tb1.Text;
+                    landingpage oo = new landingpage(user);
                     oo.Show();
                 }
                 else

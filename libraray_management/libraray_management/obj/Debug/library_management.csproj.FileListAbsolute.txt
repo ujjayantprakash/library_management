@@ -28,3 +28,7 @@ C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.view_student.resources
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.issuebook.resources
 C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.return.resources
+C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.catalogue.resources
+C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.ADD_MAG.resources
+C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.epad.resources
+C:\Users\vijay\Desktop\c#sqlproject\libraray_management\libraray_management\obj\Debug\libraray_management.view_mag.resources

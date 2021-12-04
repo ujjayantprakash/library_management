@@ -44,6 +44,7 @@ namespace libraray_management
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -89,7 +90,7 @@ namespace libraray_management
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(378, 370);
+            this.button1.Location = new System.Drawing.Point(419, 370);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 42);
             this.button1.TabIndex = 6;
@@ -100,7 +101,7 @@ namespace libraray_management
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(483, 370);
+            this.button2.Location = new System.Drawing.Point(560, 370);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 42);
             this.button2.TabIndex = 7;
@@ -186,11 +187,23 @@ namespace libraray_management
             this.dateTimePicker1.TabIndex = 15;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(288, 370);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 42);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Delete ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // addbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -231,5 +244,6 @@ namespace libraray_management
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button3;
     }
 }

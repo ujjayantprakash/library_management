@@ -1,0 +1,76 @@
+delimiter $$
+
+create trigger first_trigger
+before insert
+on newbook for each row
+begin
+   insert into insertbooktrigger(status,book_id) values('fired',new.book_name);
+end $$
+
+
+delimiter $$
+
+create trigger second_trigger
+after update
+on issuereturn for each row
+begin
+   insert into issuetrigger(reg,b_issue,status) values(old.reg,old.book_issue,'fired');
+end $$
+
+
+delimiter $$
+
+create trigger third_trigger
+after delete
+on newbook for each row
+begin
+   insert into bookdeletetrigger(book_name,status) values(old.book_name,'works');
+end $$
+
+
+
+
+delimiter //
+
+create procedure getallnotreturnedbooks()
+begin
+     select * from issuereturn where status like 'NO';
+end //
+
+show procedure status
+where Db=DATABASE() AND TYPE='PROCEDURE';
+
+
+delimiter //
+
+create procedure getallreturnedbooks()
+begin
+     select * from issuereturn where status like 'YES';
+end //
+
+
+
+
+DELIMITER $$
+
+CREATE FUNCTION countnotreturnedbooks(
+	regno varchar(300)
+) 
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE stat VARCHAR(300);
+    select distinct(count(reg)) into stat
+    from issuereturn where reg=regno AND status LIKE 'NO';
+  
+	RETURN (stat);
+END$$
+DELIMITER ;
+
+
+show triggers;
+show FUNCTION status
+where Db=DATABASE() AND TYPE='FUNCTION';
+
+
+

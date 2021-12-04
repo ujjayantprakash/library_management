@@ -54,6 +54,7 @@ namespace libraray_management
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,6 +87,7 @@ namespace libraray_management
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -331,6 +333,17 @@ namespace libraray_management
             this.label3.TabIndex = 0;
             this.label3.Text = "Name";
             // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(92, 347);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(91, 31);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Count";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // issuebook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -382,5 +395,6 @@ namespace libraray_management
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
     }
 }

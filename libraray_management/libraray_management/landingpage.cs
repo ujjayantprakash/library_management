@@ -16,7 +16,19 @@ namespace libraray_management
         {
             InitializeComponent();
         }
-
+        public landingpage(string username)
+        {
+            if(username=="student")
+            {
+                InitializeComponent();
+                addToolStripMenuItem.Enabled = false;
+                addToolStripMenuItem1.Enabled = false;
+                issueToolStripMenuItem.Enabled = false;
+                returnToolStripMenuItem.Enabled = false;
+                addToolStripMenuItem2.Enabled = false;
+                //menuStrip1.Items[0].Visible = false;
+            }
+        }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //this.Close();
@@ -67,6 +79,30 @@ namespace libraray_management
             @return ob = new @return();
             ob.Show();
             
+        }
+
+        private void catalogueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            catalogue ob = new catalogue();
+            ob.Show();
+        }
+
+        private void addToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ADD_MAG ob = new ADD_MAG();
+            ob.Show();
+        }
+
+        private void viewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            view_mag ob = new view_mag();
+            ob.Show();
+        }
+
+        private void epadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            epad ob = new epad();
+            ob.Show();
         }
     }
 }

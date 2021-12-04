@@ -193,5 +193,30 @@ namespace libraray_management
                 this.Close();
             } 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                MySqlConnection ob = new MySqlConnection(myConnection);
+                MySqlDataAdapter obj = new MySqlDataAdapter();
+                String re = textBox1.Text;
+                obj.SelectCommand = new MySqlCommand(" select distinct(library.countnotreturnedbooks('"+re+"')) from library.issuereturn;;", ob);
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                ob.Open();
+                DataSet ds = new DataSet();
+                obj.Fill(ds);
+                String msg=ds.Tables[0].Rows[0][0].ToString();
+                msg = msg + " books not returned";
+                MessageBox.Show(msg, "count", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                ob.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
