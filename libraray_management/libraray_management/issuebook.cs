@@ -151,7 +151,15 @@ namespace libraray_management
                         ob.Close();
 
                         MessageBox.Show("Book issued", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        textBox2.Clear();
+                        textBox3.Clear();
+                        textBox4.Clear();
+                        textBox5.Clear();
+                        textBox6.Clear();
+                        comboBox1.SelectedIndex = -1;
+
                     }
+
 
                     catch (Exception ex)
                     {

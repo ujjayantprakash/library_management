@@ -117,7 +117,7 @@ namespace libraray_management
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 76);
+            this.label1.Location = new System.Drawing.Point(46, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 25);
             this.label1.TabIndex = 0;
@@ -226,7 +226,7 @@ namespace libraray_management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1076, 469);
+            this.ClientSize = new System.Drawing.Size(1102, 469);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);

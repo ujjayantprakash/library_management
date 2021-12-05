@@ -147,7 +147,7 @@ namespace libraray_management
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(92, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
+            this.button1.Size = new System.Drawing.Size(91, 34);
             this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
@@ -233,7 +233,7 @@ namespace libraray_management
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(334, 375);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 35);
+            this.button4.Size = new System.Drawing.Size(88, 35);
             this.button4.TabIndex = 14;
             this.button4.Text = "ISSUE";
             this.button4.UseVisualStyleBackColor = false;

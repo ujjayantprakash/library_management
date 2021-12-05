@@ -90,6 +90,7 @@ namespace libraray_management
             ob.Close();
         }
 
+        string b_return;
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -100,12 +101,33 @@ namespace libraray_management
                 //string query;
                 //  obj.SelectCommand = new MySqlCommand("insert into library.newbook (book_name,book_author,publisher,publish_date,cost,quantity) values ('" + book_name + "','" + book_author + "','" + publisher + "','" + dop + "','" + price + "','" + quantity + "');", ob);
                 //obj.SelectCommand = new MySqlCommand("update library.student set reg = '" + regi + "' , name ='" + sname + "'  ,department = '" + dep + "' ,sem='" + semester + "'  ,mobile='" + mob + "'  ,email='" + emailid + "'  where reg='" + rowid + "'", ob);
-                obj.SelectCommand = new MySqlCommand("update library.issuereturn set status='YES',book_return='"+dateTimePicker1.Text+"' where reg='"+textBox1.Text+"' and book_id='"+b_id+"';", ob);
+               // obj.SelectCommand = new MySqlCommand("update library.issuereturn set status='YES',book_return='"+dateTimePicker1.Text+"' where reg='"+textBox1.Text+"' and book_id='"+b_id+"';", ob);
                 //obj.SelectCommand = new MySqlCommand("delete from library.issuereturn where reg='" + textBox1.Text + "' and book_id='" + b_id + "';", ob);
-                MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                //MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
                 ob.Open();
-                DataSet ds = new DataSet();
-                obj.Fill(ds);
+                //DataSet ds = new DataSet();
+                //obj.Fill(ds);
+                obj.SelectCommand = new MySqlCommand("select book_return from library.issuereturn where book_id='" + b_id + "' and reg='"+textBox1.Text+"';", ob);
+                MySqlCommandBuilder cb1 = new MySqlCommandBuilder(obj);
+                DataSet ds1 = new DataSet();
+                obj.Fill(ds1);
+                b_return= ds1.Tables[0].Rows[0][0].ToString();
+                if(string.Equals(b_return,dateTimePicker1.Text))
+                {
+                    obj.SelectCommand = new MySqlCommand("update library.issuereturn set penalty=0,book_return='" + dateTimePicker1.Text + "' where reg='" + textBox1.Text + "' and book_id='" + b_id + "';", ob);
+                    MySqlCommandBuilder cb11 = new MySqlCommandBuilder(obj);
+                    DataSet ds11 = new DataSet();
+                    obj.Fill(ds11);
+                    MessageBox.Show("no penalty","info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    obj.SelectCommand = new MySqlCommand("update library.issuereturn set penalty=50,book_return='" + dateTimePicker1.Text + "' where reg='" + textBox1.Text + "' and book_id='" + b_id + "';", ob);
+                    MySqlCommandBuilder cb11 = new MySqlCommandBuilder(obj);
+                    DataSet ds11 = new DataSet();
+                    obj.Fill(ds11);
+                    MessageBox.Show("give penalty","info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
                 ob.Close();
 
                 MessageBox.Show("Book returned", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
