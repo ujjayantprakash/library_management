@@ -21,7 +21,36 @@ namespace libraray_management
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+             {
+               mag_id = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            // MessageBox.Show((dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()));
+              }
+            panel2.Visible = true;
+            try
+            {
+                string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                MySqlConnection ob = new MySqlConnection(myConnection);
+                MySqlDataAdapter obj = new MySqlDataAdapter();
+                //string query;
+                //  obj.SelectCommand = new MySqlCommand("insert into library.magazine (book_name,book_author,publisher,publish_date,cost,quantity) values ('" + book_name + "','" + book_author + "','" + publisher + "','" + dop + "','" + price + "','" + quantity + "');", ob);
+                obj.SelectCommand = new MySqlCommand("select * from library.magazine where magazine_id='" + mag_id + "';", ob);
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                ob.Open();
+                DataSet ds = new DataSet();
+                obj.Fill(ds);
 
+                textBox2.Text = ds.Tables[0].Rows[0][0].ToString();
+                textBox3.Text = ds.Tables[0].Rows[0][1].ToString();
+
+
+
+                ob.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -56,15 +85,15 @@ namespace libraray_management
 
         }
 
-        int mag_id;
+        string mag_id;
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                mag_id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            /*if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+           {
+                mag_id = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 // MessageBox.Show((dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()));
-            }
+           }
             panel2.Visible = true;
             try
             {
@@ -73,14 +102,14 @@ namespace libraray_management
                 MySqlDataAdapter obj = new MySqlDataAdapter();
                 //string query;
                 //  obj.SelectCommand = new MySqlCommand("insert into library.magazine (book_name,book_author,publisher,publish_date,cost,quantity) values ('" + book_name + "','" + book_author + "','" + publisher + "','" + dop + "','" + price + "','" + quantity + "');", ob);
-                obj.SelectCommand = new MySqlCommand("select * from library.magazine where magazine_id='" + mag_id + "';", ob);
+                obj.SelectCommand = new MySqlCommand("select * from library.magazine where magazine_id='"+ mag_id +"';", ob);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
                 ob.Open();
                 DataSet ds = new DataSet();
                 obj.Fill(ds);
 
-                textBox2.Text = ds.Tables[0].Rows[0][1].ToString();
-                textBox3.Text = ds.Tables[0].Rows[0][2].ToString();
+                textBox2.Text = ds.Tables[0].Rows[0][0].ToString();
+                textBox3.Text = ds.Tables[0].Rows[0][1].ToString();
 
 
 
@@ -89,7 +118,7 @@ namespace libraray_management
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
 

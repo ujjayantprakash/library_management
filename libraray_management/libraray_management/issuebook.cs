@@ -127,7 +127,7 @@ namespace libraray_management
                     string regno = textBox1.Text;
                     string bookname = comboBox1.Text;
                     string bookissue = dateTimePicker1.Text;
-                    string bookreturn = "Saturday, December 11, 2021";
+                    string bookreturn = dateTimePicker2.Text;
                     string status = "NO";
                     try
                     {

@@ -174,5 +174,10 @@ namespace libraray_management
                 textBox1.Clear();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,8 +55,16 @@ namespace libraray_management
                 {
                     this.Hide();
                     string user = tb1.Text;
-                    landingpage oo = new landingpage(user);
-                    oo.Show();
+                    if (user == "student")
+                    {
+                        landingpage oo = new landingpage(user);
+                        oo.Show();
+                    }
+                    else
+                    {
+                        landingpage oo = new landingpage();
+                        oo.Show();
+                    }
                 }
                 else
                 {
@@ -75,7 +83,31 @@ namespace libraray_management
 
         private void button2_Click(object sender, EventArgs e)
         {
+            String user_name = tb1.Text;
+            String pass = tb2.Text;
 
+            try
+            {
+                string myConnection = "datasource=localhost;port=3306;username=root;password=2021";
+                MySqlConnection ob = new MySqlConnection(myConnection);
+                MySqlDataAdapter obj = new MySqlDataAdapter();
+                //string query;
+                obj.SelectCommand = new MySqlCommand("insert into library.login (username,password) values ('" + user_name + "','" + pass + "');", ob);
+                // obj.SelectCommand = new MySqlCommand("select * from library.newbook;", ob); 
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(obj);
+                ob.Open();
+                DataSet ds = new DataSet();
+                obj.Fill(ds);
+
+                MessageBox.Show("Data saved successfully", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb1.Clear();
+                tb2.Clear();
+                ob.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
