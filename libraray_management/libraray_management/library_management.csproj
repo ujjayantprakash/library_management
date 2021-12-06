@@ -89,6 +89,12 @@
     <Compile Include="issuebook.Designer.cs">
       <DependentUpon>issuebook.cs</DependentUpon>
     </Compile>
+    <Compile Include="issue_mag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issue_mag.designer.cs">
+      <DependentUpon>issue_mag.cs</DependentUpon>
+    </Compile>
     <Compile Include="landingpage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="issuebook.resx">
       <DependentUpon>issuebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issue_mag.resx">
+      <DependentUpon>issue_mag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="landingpage.resx">
       <DependentUpon>landingpage.cs</DependentUpon>

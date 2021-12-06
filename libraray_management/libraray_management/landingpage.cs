@@ -104,5 +104,11 @@ namespace libraray_management
             epad ob = new epad();
             ob.Show();
         }
+
+        private void issueToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            issue_mag ob = new issue_mag();
+            ob.Show();
+        }
     }
 }

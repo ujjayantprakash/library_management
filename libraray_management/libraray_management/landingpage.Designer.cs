@@ -47,6 +47,7 @@ namespace libraray_management
             this.epadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.issueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@ namespace libraray_management
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
@@ -67,7 +69,7 @@ namespace libraray_management
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(699, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(879, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,20 +80,20 @@ namespace libraray_management
             this.viewToolStripMenuItem});
             this.booksToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.booksToolStripMenuItem.Text = "Books";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.viewToolStripMenuItem.Text = "View";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
@@ -102,20 +104,20 @@ namespace libraray_management
             this.viewDetailsToolStripMenuItem});
             this.memberToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(99, 32);
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(99, 29);
             this.memberToolStripMenuItem.Text = "Member";
             // 
             // addToolStripMenuItem1
             // 
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(214, 34);
             this.addToolStripMenuItem1.Text = "add";
             this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // viewDetailsToolStripMenuItem
             // 
             this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
-            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.viewDetailsToolStripMenuItem.Text = "view details";
             this.viewDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewDetailsToolStripMenuItem_Click);
             // 
@@ -123,7 +125,7 @@ namespace libraray_management
             // 
             this.issueToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issueToolStripMenuItem.Name = "issueToolStripMenuItem";
-            this.issueToolStripMenuItem.Size = new System.Drawing.Size(71, 32);
+            this.issueToolStripMenuItem.Size = new System.Drawing.Size(71, 29);
             this.issueToolStripMenuItem.Text = "Issue";
             this.issueToolStripMenuItem.Click += new System.EventHandler(this.issueToolStripMenuItem_Click);
             // 
@@ -131,7 +133,7 @@ namespace libraray_management
             // 
             this.returnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(86, 32);
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
             this.returnToolStripMenuItem.Text = "Return";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
@@ -139,7 +141,7 @@ namespace libraray_management
             // 
             this.catalogueToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogueToolStripMenuItem.Name = "catalogueToolStripMenuItem";
-            this.catalogueToolStripMenuItem.Size = new System.Drawing.Size(114, 32);
+            this.catalogueToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.catalogueToolStripMenuItem.Text = "Catalogue";
             this.catalogueToolStripMenuItem.Click += new System.EventHandler(this.catalogueToolStripMenuItem_Click);
             // 
@@ -156,10 +158,11 @@ namespace libraray_management
             // 
             this.magazineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem2,
-            this.viewToolStripMenuItem1});
+            this.viewToolStripMenuItem1,
+            this.issueToolStripMenuItem1});
             this.magazineToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.magazineToolStripMenuItem.Name = "magazineToolStripMenuItem";
-            this.magazineToolStripMenuItem.Size = new System.Drawing.Size(111, 32);
+            this.magazineToolStripMenuItem.Size = new System.Drawing.Size(111, 29);
             this.magazineToolStripMenuItem.Text = "Magazine";
             // 
             // addToolStripMenuItem2
@@ -180,7 +183,7 @@ namespace libraray_management
             // 
             this.epadToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.epadToolStripMenuItem.Name = "epadToolStripMenuItem";
-            this.epadToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
+            this.epadToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
             this.epadToolStripMenuItem.Text = "Epad";
             this.epadToolStripMenuItem.Click += new System.EventHandler(this.epadToolStripMenuItem_Click);
             // 
@@ -210,6 +213,13 @@ namespace libraray_management
             this.label1.Size = new System.Drawing.Size(160, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "LIBRARY USA";
+            // 
+            // issueToolStripMenuItem1
+            // 
+            this.issueToolStripMenuItem1.Name = "issueToolStripMenuItem1";
+            this.issueToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.issueToolStripMenuItem1.Text = "Issue";
+            this.issueToolStripMenuItem1.Click += new System.EventHandler(this.issueToolStripMenuItem1_Click);
             // 
             // landingpage
             // 
@@ -253,5 +263,6 @@ namespace libraray_management
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem epadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueToolStripMenuItem1;
     }
 }
